@@ -1,3 +1,5 @@
+import 'dart:html';
+
 import 'package:expense_tracking/expenses_list.dart';
 import 'package:expense_tracking/modals/expense.dart';
 import 'package:flutter/material.dart';
@@ -21,6 +23,11 @@ class _ExpensesState extends State<Expenses> {
     Expense(
         title: 'Cinima',
         amount: 29.99,
+        date: DateTime.now(),
+        category: Categories.leisure),
+    Expense(
+        title: 'Coffee',
+        amount: 3.99,
         date: DateTime.now(),
         category: Categories.leisure)
   ];
