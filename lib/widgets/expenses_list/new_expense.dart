@@ -1,5 +1,6 @@
 import 'package:expense_tracking/modals/expense.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
 
 class NewExpense extends StatefulWidget {
@@ -89,7 +90,10 @@ class _NewExpenseState extends State<NewExpense> {
                 child: TextField(
                   controller: amountController,
                   decoration: const InputDecoration(
-                      label: Text('Amount'), prefixText: '\$ '),
+                      label: Text(
+                        'Amount',
+                      ),
+                      prefixText: '\$'),
                   keyboardType: TextInputType.number,
                 ),
               ),

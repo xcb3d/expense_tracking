@@ -3,10 +3,16 @@ import 'package:flutter/material.dart';
 
 class ExpensesItem extends StatelessWidget {
   final Expense expense;
-
   const ExpensesItem({super.key, required this.expense});
   @override
   Widget build(BuildContext context) {
+    Widget TextCard(String text) {
+      return Text(
+        text,
+        style: Theme.of(context).textTheme.titleLarge,
+      );
+    }
+
     return Card(
       child: Padding(
         padding: const EdgeInsets.symmetric(

@@ -3,6 +3,7 @@ import 'package:expense_tracking/widgets/expenses_list/expenses_list.dart';
 import 'package:expense_tracking/modals/expense.dart';
 import 'package:expense_tracking/widgets/expenses_list/new_expense.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Expenses extends StatefulWidget {
   const Expenses({super.key});
@@ -94,7 +95,6 @@ class _ExpensesState extends State<Expenses> {
         ],
       ),
       body: Column(children: [
-        const Text('The Chart'),
         Chart(expenses: registeredExpenses),
         Expanded(
           child: registeredExpenses.isEmpty

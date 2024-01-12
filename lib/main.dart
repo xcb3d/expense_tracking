@@ -1,5 +1,6 @@
 import 'package:expense_tracking/widgets/expenses_list/expenses.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 var kColorScheme = ColorScheme.fromSeed(
   seedColor: const Color.fromARGB(255, 96, 59, 181),
@@ -32,6 +33,7 @@ void main() {
         color: kColorScheme.onPrimaryContainer,
         fontWeight: FontWeight.bold,
         fontSize: 16,
+        fontFamily: "LatoBold",
       ),
     ),
   );
