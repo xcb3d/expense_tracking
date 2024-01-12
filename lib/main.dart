@@ -1,16 +1,22 @@
 import 'package:expense_tracking/widgets/expenses_list/expenses.dart';
 import 'package:flutter/material.dart';
 
-var kColorScheme =
-    ColorScheme.fromSeed(seedColor: const Color.fromARGB(255, 96, 59, 181));
+var kColorScheme = ColorScheme.fromSeed(
+  seedColor: const Color.fromARGB(255, 96, 59, 181),
+);
 var kDarkColorScheme = ColorScheme.fromSeed(
-    brightness: Brightness.dark,
-    seedColor: const Color.fromARGB(255, 5, 99, 125));
+  brightness: Brightness.dark,
+  seedColor: const Color.fromARGB(255, 5, 99, 125),
+);
 void main() {
   ThemeData myTheme = ThemeData(
     cardTheme: CardTheme(
-        color: kColorScheme.secondaryContainer,
-        margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 16)),
+      color: kColorScheme.secondaryContainer.withOpacity(0.9),
+      margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(16),
+      ),
+    ),
     colorScheme: kColorScheme,
     appBarTheme: AppBarTheme(
       backgroundColor: kColorScheme.onPrimaryContainer,
@@ -31,8 +37,12 @@ void main() {
   );
   ThemeData darkTheme = ThemeData(
     cardTheme: CardTheme(
-        color: kDarkColorScheme.secondaryContainer,
-        margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 16)),
+      color: kDarkColorScheme.secondaryContainer,
+      margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(16),
+      ),
+    ),
     colorScheme: kDarkColorScheme,
     appBarTheme: AppBarTheme(
       backgroundColor: kDarkColorScheme.onPrimaryContainer,

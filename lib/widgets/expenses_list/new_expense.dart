@@ -75,6 +75,9 @@ class _NewExpenseState extends State<NewExpense> {
       padding: const EdgeInsets.all(16.0),
       child: Column(
         children: [
+          const SizedBox(
+            height: 30,
+          ),
           TextField(
             controller: titleController,
             maxLength: 50,
@@ -94,20 +97,27 @@ class _NewExpenseState extends State<NewExpense> {
                 width: 16,
               ),
               Expanded(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  crossAxisAlignment: CrossAxisAlignment.center,
+                child: Column(
                   children: [
-                    Text(
-                      selectedDate == null
-                          ? 'No Selected Date'
-                          : DateFormat.yMd().format(selectedDate!),
-                      // style: Theme.of(context).textTheme.displayLarge,
+                    SizedBox(
+                      height: 16,
                     ),
-                    IconButton(
-                      onPressed: presentDatePicker,
-                      icon: const Icon(Icons.calendar_month),
-                    )
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Text(
+                          selectedDate == null
+                              ? 'No Selected Date'
+                              : DateFormat.yMd().format(selectedDate!),
+                          // style: Theme.of(context).textTheme.displayLarge,
+                        ),
+                        IconButton(
+                          onPressed: presentDatePicker,
+                          icon: const Icon(Icons.calendar_month),
+                        )
+                      ],
+                    ),
                   ],
                 ),
               )
